@@ -14,11 +14,11 @@
 #### _OBS: Para compilar é necessario ter o compilador GCC e a biblioteca ncurses_
 
 ### Instalar GCC no linux Debian/Ubuntu
-#### sudo apt update
-#### sudo apt install build-essential 
+####  sudo apt update
+####  sudo apt install build-essential 
 
 ### Instalar biblioteca Ncurses no Debian/Ubuntu
-#### sudo apt-get install libncurses5-dev libncursesw5-dev
+####  sudo apt-get install libncurses5-dev libncursesw5-dev
   
 ### Compilar
-#### gcc -o Pacman Pacman.c -lncurses
+####  gcc -o Pacman Pacman.c -lncurses
