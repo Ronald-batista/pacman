@@ -2,7 +2,7 @@
 #include <curses.h> 
 #include <stdio.h>
 #include "Biblioteca.h"
-
+#include "Biblioteca.c"
 
 #define DIREITA 1
 #define BAIXO 2
