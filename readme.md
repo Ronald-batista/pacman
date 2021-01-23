@@ -2,6 +2,6 @@
 
 ### O jogo foi desenvolvido para a disciplina CI1001 - Programação 1 -na UFPR.
 
-![Tela de instruções](https://uploaddeimagens.com.br/imagens/bL6uc1Q)
+![Tela de instruções](https://uploaddeimagens.com.br/images/003/049/637/full/tela-instrucoes.PNG?1611418208)
 
-![Tela do game](https://uploaddeimagens.com.br/imagens/2akkxW0)
+![Tela do game](https://uploaddeimagens.com.br/images/003/049/638/full/tela-game.PNG?1611418249)
