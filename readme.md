@@ -1,2 +1,2 @@
-# Game baseado no Pacman classico desenvolvido em C/C++
+# Game baseado no Pacman classico desenvolvido em C
 
