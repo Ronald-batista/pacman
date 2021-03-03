@@ -30,7 +30,7 @@ jobs:
       
       # Compile program
       - name: Compile the program
-        run: gcc - pacman pacman.c
+        run: gcc -o pacman pacman.c
         
       # Execute program
       - name: Execute the program
