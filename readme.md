@@ -1,4 +1,4 @@
-# Game baseado no Pacman classico desenvolvido em C
+# Game baseado no Pacman clássico desenvolvido em C
 
 ### O jogo foi desenvolvido para a disciplina CI1001 - Programação 1 - na UFPR.
 
