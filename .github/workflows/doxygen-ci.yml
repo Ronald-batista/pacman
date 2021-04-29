@@ -38,8 +38,7 @@ jobs:
         # Path to Doxyfile
         doxyfile-path: "docs/Doxygen/Doxyfile" # default is ./Doxyfile
         # Working directory
-        working-directory: "docs" # default is .
-        enable-latex: false
+        working-directory: "." # default is .
         
     - name: Copying files to docs
       run: |
