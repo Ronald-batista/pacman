@@ -48,7 +48,7 @@ jobs:
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
       uses: EndBug/add-and-commit@v7
       with:
-        author_name: ${{ github.actor }}
+        author_name: Ronald-batista
         author_email: ronald_hobo@outlook.com.br
         message: 'Update DoxyFile'
       env:
