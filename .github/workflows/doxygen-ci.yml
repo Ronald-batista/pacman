@@ -20,6 +20,16 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+
+
+    -name: Create Doxygen file # EXECUTAR ESSA STEP SOMENTE DA PRIMEIRA VEZ
+     run: |
+       mkdir docs
+       cd docs
+       mkdir Doxygen
+       cd Doxygen
+       sudo apt install Doxygen
+       doxygen -g Doxyfile
         
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
