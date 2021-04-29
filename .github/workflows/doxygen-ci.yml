@@ -43,8 +43,8 @@ jobs:
         
     - name: Copying files to docs
       run: |
-        mv html docs
-        mv latex docs
+        sudo mv html docs
+        sudo mv latex docs
         
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
       uses: EndBug/add-and-commit@v7
