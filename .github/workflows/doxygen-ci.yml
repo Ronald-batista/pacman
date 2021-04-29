@@ -41,6 +41,11 @@ jobs:
         working-directory: "docs" # default is .
         enable-latex: false
         
+    - name: Copying files to docs
+      run: |
+        sudo mv html docs/Doxygen
+        sudo mv latex docs/Doxygen
+        
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
       uses: EndBug/add-and-commit@v7
       with:
