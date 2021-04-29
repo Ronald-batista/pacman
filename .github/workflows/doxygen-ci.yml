@@ -24,6 +24,7 @@ jobs:
 
     - name: Create Doxygen file # EXECUTAR ESSA STEP SOMENTE DA PRIMEIRA VEZ
       run: |
+        sudo rm -r docs
         mkdir docs
         cd docs
         mkdir Doxygen
@@ -32,12 +33,13 @@ jobs:
         doxygen -g Doxyfile
         
     - name: Doxygen Action # https://github.com/mattnotmitt/doxygen-action
-      uses: mattnotmitt/doxygen-action@v1.1.0
+      uses: mattnotmitt/doxygen-action@v1
       with:
         # Path to Doxyfile
         doxyfile-path: "docs/Doxygen/Doxyfile" # default is ./Doxyfile
         # Working directory
-        working-directory: "." # default is .
+        working-directory: "docs/Doxygen" # default is .
+        enable-latex: false
         
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
       uses: EndBug/add-and-commit@v7
@@ -48,11 +50,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
-      uses: EndBug/add-and-commit@v7
-      with:
-        author_name: Ronald-batista
-        author_email: ronald_hobo@outlook.com.br
-        message: 'Update DoxyFile'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
