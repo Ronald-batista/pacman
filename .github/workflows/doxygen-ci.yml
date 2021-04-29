@@ -25,6 +25,8 @@ jobs:
     - name: Create Doxygen file # EXECUTAR ESSA STEP SOMENTE DA PRIMEIRA VEZ
       run: |
         sudo rm -r docs
+        sudo rm -r html
+        sudo rm -r latex
         mkdir docs
         cd docs
         mkdir Doxygen
@@ -38,7 +40,7 @@ jobs:
         # Path to Doxyfile
         doxyfile-path: "docs/Doxygen/Doxyfile" # default is ./Doxyfile
         # Working directory
-        working-directory: "docs" # default is .
+        working-directory: "./docs/" # default is .
         enable-latex: false
         
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
