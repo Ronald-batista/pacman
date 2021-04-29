@@ -38,8 +38,13 @@ jobs:
         # Path to Doxyfile
         doxyfile-path: "docs/Doxygen/Doxyfile" # default is ./Doxyfile
         # Working directory
-        working-directory: "./docs" # default is .
+        working-directory: "." # default is .
         enable-latex: false
+        
+    - name: Copying files to docs
+      run: |
+        mv html docs
+        mv latex docs
         
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
       uses: EndBug/add-and-commit@v7
