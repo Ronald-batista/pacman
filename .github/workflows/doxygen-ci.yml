@@ -28,7 +28,7 @@ jobs:
         cd docs
         mkdir Doxygen
         cd Doxygen
-        sudo apt install Doxygen
+        sudo apt install doxygen
         doxygen -g Doxyfile
         
     - name: Doxygen Action # https://github.com/mattnotmitt/doxygen-action
