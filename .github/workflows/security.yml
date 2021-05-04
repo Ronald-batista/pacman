@@ -1,11 +1,8 @@
-# Update submodule json for modern c++ when the source repositories create a new release
-name: Update submodule json for modern c++
+name: clang-format lint action
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   # This workflow contains a single job called "build"
@@ -19,17 +16,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Initiate submodule
-    - name: Initiate submodules
-      run: |
-          git submodule init
-          git submodule update
 
-    # Update submodule
-    - name: Update submodule
-      run: |
-        cd hoje
-        git pull origin main
+    - uses: DoozyX/clang-format-lint-action@v0.12 #https://github.com/marketplace/actions/clang-format-lint
+      with:
+        source: '.'
+        exclude: './docs'
+        extensions: 'h,cpp,c'
+        clangFormatVersion: 12
+        
 
     # Commit and Push
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
@@ -40,4 +34,6 @@ jobs:
         message: 'Update DoxyFile'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
     
