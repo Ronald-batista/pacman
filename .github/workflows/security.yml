@@ -16,21 +16,13 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # clang-tidy check
-    - name: clang-tidy check
-      uses: smay1613/clang-tidy-action@master
+
+    - name: cpp-linter
+      uses: shenxianpeng/cpp-linter-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # Commit and Push
-    - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
-      uses: EndBug/add-and-commit@v7
-      with:
-        author_name: Ronald-batista
-        author_email: ronald_hobo@outlook.com.br
-        message: 'Update DoxyFile'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
     
