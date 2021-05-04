@@ -21,8 +21,9 @@ jobs:
       with:
         source: '.'
         exclude: './docs'
-        extensions: 'h,cpp,c'
+        extensions: 'h,c'
         clangFormatVersion: 12
+        style: chromium
         
 
     # Commit and Push
