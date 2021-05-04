@@ -16,15 +16,11 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-
-    - uses: DoozyX/clang-format-lint-action@v0.12 #https://github.com/marketplace/actions/clang-format-lint
-      with:
-        source: '.'
-        exclude: './docs'
-        extensions: 'h,c'
-        clangFormatVersion: 12
-        style: chromium
-        
+    # clang-tidy check
+    - name: clang-tidy check
+      uses: smay1613/clang-tidy-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Commit and Push
     - name: publish changes to the repository # https://github.com/EndBug/add-and-commit
