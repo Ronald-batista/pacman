@@ -1,5 +1,5 @@
 name: clang-format lint action
-
+  
 on:
   push:
     branches: [ master ]
